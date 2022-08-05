@@ -1,0 +1,31 @@
+name: Cypress Tests
+
+on: [push]
+
+jobs:
+  tests-ubuntu:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install node
+        uses: actions/setup-node@v3
+        with:
+            node-version: '16'
+      - name: Install dependencies
+        run: npm ci       
+      # - name: Cypress run - Chrome
+      #   uses: cypress-io/github-action@v4
+      #   with:
+      #     browser: chrome
+      # - name: Cypress run - Firefox
+      #   uses: cypress-io/github-action@v4
+      #   with:
+      #     browser: firefox
+  # tests-windows:
+  #   runs-on: windows-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: cypress-io/github-action@v4
+  #       with:
+  #         browser: edge
