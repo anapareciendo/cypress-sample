@@ -11,7 +11,8 @@ module.exports = defineConfig({
     },
     baseUrl: 'https://automationintesting.online/',
     specPattern: [
-      'cypress/e2e/send_msg.cy.js',
+      'cypress/e2e/send_msg.cy.js'
+
     ]
   },
 });

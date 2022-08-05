@@ -14,14 +14,14 @@ jobs:
             node-version: '16'
       - name: Install dependencies
         run: npm ci       
-      # - name: Cypress run - Chrome
-      #   uses: cypress-io/github-action@v4
-      #   with:
-      #     browser: chrome
-      # - name: Cypress run - Firefox
-      #   uses: cypress-io/github-action@v4
-      #   with:
-      #     browser: firefox
+      - name: Cypress run - Chrome
+        uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
+      - name: Cypress run - Firefox
+        uses: cypress-io/github-action@v4
+        with:
+          browser: firefox
   # tests-windows:
   #   runs-on: windows-latest
   #   steps:
